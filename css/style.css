@@ -63,50 +63,67 @@ body {
     color: white;
     
   }
-
-
   .materias a {
     text-decoration: none;
     color: white;
   }
-  
     .teachers {
       display: flex;
     }
-
-  .conheca {
+.conheca {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 32px;
     padding: 20px;
-    margin: 10dvh 45dvh;
-    width: 60%;
-    height: auto;
+    margin: 10dvh auto;
+    width: 90%;
+    max-width: 900px;
     background-color: #D3B12C;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-decoration: none;
-  }
-
-  .docentes {
+    transition: flex-direction 0.3s;
+}
+.conheca .docentes {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 20px;
-    width: 100%;
+    align-items: flex-start;
+    color: #fff;
+    gap: 8px;
+}
+.conheca img {
+    width: 180px;
+    max-width: 40vw;
     height: auto;
-    list-style: none;
-    color: #f4f6f9;
-  }
+    border-radius: 10%;
+    object-fit: cover;
+}
 
+@media (max-width: 700px) {
+    .conheca {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+        padding: 16px;
+    }
+    .conheca img {
+        width: 120px;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+    .conheca .docentes {
+        align-items: center;
+    }
+}
   .conheca p {
     font-size: 1rem;
     color: #ffffff;
     font-style: bold;
     list-style: none;
   }
-
   .conheca h1 {
     font-size: 2.5rem;
     color: #ffffff;
@@ -115,18 +132,10 @@ body {
     height: auto;
     list-style: none;
   }
-
-  .conheca img {
-    width: 40dvh;
-    height: 40dvh;
-    border-radius: 10%;
-    
-    transition: transform 0.3s;
-  }
-
   .footer {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: #0F2C64;
     color: white;
     text-align: center;
@@ -136,8 +145,8 @@ body {
     bottom: 0;
     width: 100%;  
     height: auto;
+    justify-content: space-between;
   }
-
   .footer p {
     font-size: 1rem;
     color: #ffffff;
@@ -146,14 +155,12 @@ body {
     justify-content: center;
     align-items: center;
   } 
-
   .footer img {
-    position: relative;
-    top: 0;
-    left: 100dvh;  
-    width: 20dvh;
-    height: 5dvh;
-    margin: 0 10px;
+    width: 190px; 
+    height: auto;
+    margin-right: 20px;
+    margin-left: 0;
+    position: static;
   } 
   li{
     list-style: none;
@@ -214,4 +221,32 @@ body {
     margin-left: 0;
     max-width: 100%;
 }
-            
+.dropdown-item{
+  background-color: #0F2C64;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin: auto;
+    margin-top: 40px;
+}
+.sobre-objetivo-container > div,
+.sobre-objetivo-container > .card {
+    margin: 0;
+}
+
+.sobre-objetivo-container {
+    display: flex;
+    gap: 0; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+
